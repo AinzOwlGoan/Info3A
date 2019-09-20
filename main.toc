@@ -1,0 +1,31 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {1}Metodologie Agili}{1}% 
+\contentsline {paragraph}{1.}{1}% 
+\contentsline {paragraph}{2.}{1}% 
+\contentsline {paragraph}{3.}{1}% 
+\contentsline {paragraph}{4.}{1}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{1}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{1}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{1}% 
+\contentsline {subparagraph}{-}{1}% 
+\contentsline {subsection}{\numberline {1.1}Manifesto Agile}{1}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{2}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{2}% 
+\contentsline {subparagraph}{\IeC {\textbullet }}{2}% 
+\contentsline {paragraph}{1}{2}% 
+\contentsline {paragraph}{2}{2}% 
+\contentsline {paragraph}{3}{2}% 
+\contentsline {paragraph}{4}{2}% 
+\contentsline {paragraph}{5}{2}% 
+\contentsline {paragraph}{6}{2}% 
+\contentsline {paragraph}{7}{2}% 
+\contentsline {paragraph}{8}{2}% 
+\contentsline {paragraph}{9}{2}% 
+\contentsline {paragraph}{10}{3}% 
+\contentsline {paragraph}{11}{3}% 
+\contentsline {paragraph}{12}{3}% 
+\contentsline {subsection}{\numberline {1.2}Processi Agili}{3}% 
+\contentsline {subsection}{\numberline {1.3}Esempio di \textit {best practice} Agile}{3}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{3}% 
+\contentsline {subsection}{\numberline {1.4}DevOps}{4}% 
