@@ -27,4 +27,5 @@
 \contentsline {paragraph}{12}{3}% 
 \contentsline {subsection}{\numberline {1.2}Processi Agili}{3}% 
 \contentsline {subsection}{\numberline {1.3}Esempio di \textit {best practice} Agile}{3}% 
-\contentsline {subsection}{\numberline {1.4}DevOps}{3}% 
+\contentsline {paragraph}{\IeC {\textbullet }}{3}% 
+\contentsline {subsection}{\numberline {1.4}DevOps}{4}% 
