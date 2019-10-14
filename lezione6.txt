@@ -1,0 +1,126 @@
+\section{Capitolo 6}
+
+I pattern risolvono problemi di cambiamento, interoperabilità, efficienza, testabilità, riusabilità, disponibilità
+\\Ci può essere confusione tra pattern, architettura e framework:
+\paragraph{•} Architettura: modella la struttura software al più alto livello possibile
+\paragraph{•} Pattern: si possono vedere come architetture locali per componenti architetturali o sotto-componenti
+\paragraph{•} Framework: sono sistemi software parzialmente completati che possono essere targettati in una particolare applicazione
+
+\subsection{Design Pattern}
+Gang of Four, sono i creatori del movimento, hanno diviso i pattern in:
+\paragraph{•} \textbf{Creazionali}: sperazione della creazioni dalle operazioni/uso
+\paragraph{•} \textbf{Strutturali}: indirizza i problemi dell'uso dell'approccio OO
+\paragraph{•} \textbf{Di Comportamento}: assegna la responsabilità alle classi
+
+\subsection{Descrizione dei pattern}
+
+\paragraph{-} \textbf{Contesto}: la situazione generale dove il pattern si applica
+\paragraph{-} \textbf{Problema}: indica la difficoltà principale
+\paragraph{-} \textbf{Forze}: i problemi da considerare quando vado a risolvere il problema
+\paragraph{-} \textbf{Soluzione}: il metodo raccomandato per risolvere il problema
+
+\subsection{Singleton}
+
+Si può comunemente trovare almeno una classe per la quale dovrebbe esistere una sola istanza. Il problema
+è come faccio ad assicurare che non è maipossibile creare più di un'istanza di Singleton.
+\\Un costruttore pubico non può garantire che non vengano create più di un'instanza, l'istanza di singleton deve
+anche essere accessibile a tutte le altre classi che la richiedono!
+
+\begin{center}
+\includegraphics[scale=0.5]{singleton}
+\end{center}
+
+\subsection{Delegation}
+
+Vogliamo riusare il metodo di un'altra classe nella nostra attuale, dobbiamo far comunicare le classi fra di loro.
+\begin{center}
+\includegraphics[scale=0.5]{delegation}
+\end{center}
+
+La delega può anche avvenire in cascata, non c'è quindi un limite al numero di volte nel quale posso risusare metodi di altre classi
+
+\subsection{Adapter}
+
+Una sorta di estensione del concetto di delega, voglio riusare e riadattare una classe, voglio incorporare una classe in una gerarchia di mie classi
+ma non in modo esplicito, introduco un oggetto che fa da \textbf{ponte}. 
+
+\begin{center}
+\includegraphics[scale=0.5]{adapter}
+\end{center}
+
+Ad adattare un metodo deve esserci un'altra classe che eredita da una superclasse
+un metodo, e poi applica il delegation sulla classe che voglio includere. Avremo quindi incorporato una classe pre-esistente in un insieme originario di classi!
+
+\subsection{Abstraction-Occurrence}
+
+Solitamene in un modello di dominio dove trovi un se di oggetti legati (occorrenze), i membri di questi set condividono informazioni in comune, però sono anche diversi
+Qual è il miglior metodo per rappresentare questo set di occorrenze in un diagramma a classi?
+Devi rappresentare i membri di ogni set senza duplicare le informazioni comuni!
+
+\begin{center}
+\includegraphics[scale=0.5]{abstractO}
+\end{center}
+
+\textbf{antipattern} altre soluzioni sub-ottime sono:
+\paragraph{•} l'introduzion di un'unica classe con tutte le informazioni dentro
+\paragraph{•} sottoclassi, il totale forma una gerarchia
+\paragraph{•} distribuzioni di attributi in modo diverso
+
+\subsection{Gerarchia generale}
+
+Gli oggetti in una gerarchia possono avere uno o più oggetti sopra di loro (superiors) ed uno o più oggetti sotto di loro (subordinati), qualche oggetto però può NON avere subordinati.
+Il problema è come si rappresentano gli oggetti senza subordinati? La soluzione è quella di volere un modo di rappresentazione flessibile che previene che certi oggetti possano avere subordinati
+
+\begin{center}
+\includegraphics[scale=0.5]{gerhier}
+\end{center}
+
+\subsection{Read-only}
+
+Vogliamo che determinate classe abbiano specifici privilegi per modificare attirbuti di oggetti che sarebbero immutabili. 
+Usare public,protected non è una soluzione adeguatatamente selettiva!
+
+\begin{center}
+\includegraphics[scale=0.5]{readonly}
+\end{center}
+
+\textbf{Antipattern}, far diventare la classe read-only una sottoclassse di "Mutable", fare l'override di tutti i metodi che modificano le proprietà
+
+\subsection{Observer}
+
+Quando c'è un'associazione creata tra 2 classi, il codice diventa inseparabile, se vuoi riusare una classe devi usare anche l'altra.
+è un pattern comportamentale, bisogna massimizzare la flessibilità del sistema al maggior grado possibile.
+
+\begin{center}
+\includegraphics[scale=0.5]{observer}
+\end{center}
+
+Java provvede un'implementazione già interna per l'Observer pattern, la troviamo nella classe java.util.Observable, e l'interfaccia java.util.Observer.
+\\Il protocollo JMS (Java Message Service) usa il Pattern Observer insieme al Mediator Pattern per consentire a delle applicazioni di iscriversi e pubblicare dati ad altre applicazioni. (Publish-Subscribe)
+
+\\\textbf{Antipattern}: connettere un observer direttamente ad una cosa osservabile così hanno referenze insieme, far dell'observer una sottoclasse di observable
+
+\subsection{Factory}
+
+Un framework riusabile ha bisogno di creare oggetti, però la classe che ha creato l'oggetto  dipende dall'applicazione.
+Vogliamo che il framework sia creato e lavori anchecon classi delle quali lui non conosce ancora niente. La soluzione è data dal fatto che il framework delega la creazione di classi specifiche per l'applicazione ad una classe specializzata, la Factory.
+La Fatory è un'interfaccia generica definita nel framework, l'interfaccia factory dichiara un metodo che ha come scopo la creazine di sottoclassi generiche
+\begin{center}
+\includegraphics[scale=0.5]{factory}
+\end{center}
+•••••••••••••
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
