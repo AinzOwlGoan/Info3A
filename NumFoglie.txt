@@ -1,0 +1,35 @@
+public int count = 0;
+
+	public int CalcolaFoglie(NodoBinario radice) {
+		
+		
+		if(radice == null)
+			return 0;
+		else {
+			
+			if(radice.sinistro == null && radice.destro == null) {
+				count++;
+				System.out.println("RAD: "+count);
+				return count;
+			}
+				
+			else {
+				
+				if(radice.sinistro != null) {
+					System.out.println("SX"+count);
+					
+					return CalcolaFoglie(radice.sinistro)+count;
+					
+				}
+				if(radice.destro != null) {
+					
+					System.out.println("DX: "+count);
+					
+					return CalcolaFoglie(radice.destro)+count;
+					
+				}
+				
+			}
+		}
+		return count;
+	}
